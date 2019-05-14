@@ -40,19 +40,12 @@ STD_PHP_INI_ENTRY("pam.servicename", "php", PHP_INI_ALL, OnUpdateString, service
 PHP_INI_END()
 /* }}} */
 
-#ifdef ZEND_BEGIN_ARG_INFO
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pam_auth, ZEND_SEND_BY_VAL, ZEND_RETURN_VALUE, 2)
 ZEND_ARG_INFO(0, username)
 ZEND_ARG_INFO(0, password)
 ZEND_ARG_INFO(0, status)
 ZEND_ARG_INFO(0, checkacctmgmt)
 ZEND_END_ARG_INFO()
-#else
-#define arginfo_pam_parse third_arg_force_ref
-#define arginfo_pam_parse_file third_arg_force_ref
-#define arginfo_parm_parse_url third_arg_force_ref
-#endif
-
 
 /* {{{ pam_functions[]
  */

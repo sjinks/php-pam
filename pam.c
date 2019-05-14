@@ -20,6 +20,10 @@
 /* $Id: pam.c 291416 2009-11-29 10:47:35Z mikl $ */
 
 #include "php_pam.h"
+#include <ext/standard/info.h>
+#include <Zend/zend_hash.h>
+
+#include <security/pam_appl.h>
 
 static PHP_MINIT_FUNCTION(pam);
 static PHP_MSHUTDOWN_FUNCTION(pam);

@@ -123,14 +123,6 @@ static PHP_GINIT_FUNCTION(pam)
 }
 /* }}} */
 
-/* {{{ php_pam_init_globals
- */
-static void php_pam_init_globals(zend_pam_globals *pam_globals)
-{
-	pam_globals->servicename = NULL;
-}
-/* }}} */
-
 /*
  * auth_pam_talker: supply authentication information to PAM when asked
  *

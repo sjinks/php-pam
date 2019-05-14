@@ -159,7 +159,6 @@ int auth_pam_talker(int num_msg,
 				response[i].resp = strdup(userinfo->pw);
 				break;
 			default:
-				if (response)
 				free(response);
 				return PAM_CONV_ERR;
 		}
@@ -218,7 +217,6 @@ int chpass_pam_talker(int num_msg,
 				break;
 			default:
 				if (response)
-				free(response);
 				return PAM_CONV_ERR;
 		}
 	}

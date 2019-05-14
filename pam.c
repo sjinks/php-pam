@@ -47,11 +47,18 @@ ZEND_ARG_INFO(0, status)
 ZEND_ARG_INFO(0, checkacctmgmt)
 ZEND_END_ARG_INFO()
 
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pam_chpass, ZEND_SEND_BY_VAL, ZEND_RETURN_VALUE, 3)
+ZEND_ARG_INFO(0, username)
+ZEND_ARG_INFO(0, oldpassword)
+ZEND_ARG_INFO(0, newpassword)
+ZEND_ARG_INFO(0, status)
+ZEND_END_ARG_INFO()
+
 /* {{{ pam_functions[]
  */
 zend_function_entry pam_functions[] = {
 	PHP_FE(pam_auth,	arginfo_pam_auth)
-	PHP_FE(pam_chpass,	NULL)
+	PHP_FE(pam_chpass,	arginfo_pam_chpass)
 	{NULL, NULL, NULL}
 };
 /* }}} */
